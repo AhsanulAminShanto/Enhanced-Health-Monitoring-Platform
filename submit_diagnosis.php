@@ -2,13 +2,12 @@
 include 'db_connect.php';
 
 // Collect data from form
-$name = $_POST['name'];
-$age = $_POST['age'];
-$gender = $_POST['gender'];
-$address = $_POST['address'];
+$patient_id = $_POST['patient_id'];
+$diagnosis = $_POST['diagnosis'];
+$date = $_POST['date'];
 
 // Insert data into database
-$sql = "INSERT INTO demographics (name, age, gender, address) VALUES ('$name', '$age', '$gender', '$address')";
+$sql = "INSERT INTO diagnosis (patient_id, diagnosis, date) VALUES ('$patient_id', '$diagnosis', '$date')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

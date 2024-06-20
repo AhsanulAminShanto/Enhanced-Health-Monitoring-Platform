@@ -2,27 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Health Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="form_demographic.php">Patient Demographic Form</a></li>
-            <li><a href="analytics_demographic.php">Patient Demographic Analytics</a></li>
-            <li><a href="form_diagnosis.php">Patient Diagnosis Form</a></li>
-            <li><a href="analytics_diagnosis.php">Patient Diagnosis Analytics</a></li>
-            <li><a href="form_risk_analysis.php">Risk Analysis Form</a></li>
-            <li><a href="analytics_risk_analysis.php">Risk Analysis Analytics</a></li>
-            <li><a href="form_notifications.php">Patient Notifications Form</a></li>
-            <li><a href="analytics_notifications.php">Patient Notifications Analytics</a></li>
-            <li><a href="form_specialists.php">Specialists Form</a></li>
-            <li><a href="analytics_specialists.php">Specialists Analytics</a></li>
-            <li><a href="form_facilities.php">Facilities Form</a></li>
-            <li><a href="analytics_facilities.php">Facilities Analytics</a></li>
+            <li><a href="#">Patient Demographics</a>
+                <ul>
+                    <li><a href="form_demographic.php">Form</a></li>
+                    <li><a href="analytics_demographic.php">Analytics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Patient Diagnosis</a>
+                <ul>
+                    <li><a href="form_diagnosis.php">Form</a></li>
+                    <li><a href="analytics_diagnosis.php">Analytics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Risk Analysis</a>
+                <ul>
+                    <li><a href="form_risk_analysis.php">Form</a></li>
+                    <li><a href="analytics_risk_analysis.php">Analytics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Notifications</a>
+                <ul>
+                    <li><a href="form_notifications.php">Form</a></li>
+                    <li><a href="analytics_notifications.php">Analytics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Specialists</a>
+                <ul>
+                    <li><a href="form_specialists.php">Form</a></li>
+                    <li><a href="analytics_specialists.php">Analytics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Facilities</a>
+                <ul>
+                    <li><a href="form_facilities.php">Form</a></li>
+                    <li><a href="analytics_facilities.php">Analytics</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Logout</a>
+                <ul>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="signup.php">signup</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
-    <h1>Welcome to the Enhanced Health Monitoring Platform Dashboard</h1>
+
+    <div class="content">
+        <h1>Welcome to the Enhanced Health Monitoring Platform for Diabetic Patients</h1>
+        <p>Select a category from the navigation bar to get started.</p>
+    </div>
 </body>
 </html>
 

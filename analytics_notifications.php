@@ -7,10 +7,24 @@
 </head>
 <body>
     <h1>Patient Notifications Analytics</h1>
-    <!-- Placeholder for analytics data -->
-    <div id="notifications-analytics">
-        <!-- This section will be populated with data using server-side code or JavaScript for fetching data from the backend -->
-    </div>
+    <?php
+    include 'db_connect.php';
+
+    $sql = "SELECT * FROM notifications";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        echo "<table><tr><th>ID</th><th>Patient ID</th><th>Notification</th></tr>";
+        while($row = $result->fetch_assoc()) {
+            echo "<tr><td>" . $row["id"]. "</td><td>" . $row["patient_id"]. "</td><td>" . $row["notification"]. "</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
+
+    $conn->close();
+    ?>
 </body>
 </html>
 

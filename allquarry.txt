@@ -1,0 +1,47 @@
+CREATE DATABASE health_monitoring;
+
+USE health_monitoring;
+
+CREATE TABLE demographics (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    address VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE diagnosis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT NOT NULL,
+    diagnosis VARCHAR(255) NOT NULL,
+    date DATE NOT NULL
+);
+
+CREATE TABLE risk_analysis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT NOT NULL,
+    risk_factor VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL
+);
+
+CREATE TABLE notifications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT NOT NULL,
+    notification TEXT NOT NULL
+);
+
+CREATE TABLE specialists (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    specialist_name VARCHAR(255) NOT NULL,
+    specialty VARCHAR(255) NOT NULL,
+    contact_info VARCHAR(255) NOT NULL,
+    associated_risks TEXT NOT NULL
+);
+
+CREATE TABLE facilities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    facility_name VARCHAR(255) NOT NULL,
+    facility_type VARCHAR(255) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    contact_info VARCHAR(255) NOT NULL
+);
